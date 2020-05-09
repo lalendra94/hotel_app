@@ -16,9 +16,13 @@
 
 
 <!-- Bootstrap 4 -->
-<script src="<?php echo base_url("assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js")?>"></script>
 
+<script src="<?php echo base_url("assets/plugins/inputmask/min/jquery.inputmask.bundle.min.js")?>"></script>
+<script src="<?php echo base_url("assets/plugins/moment/moment.min.js")?>"></script>
+<script src="<?php echo base_url("assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js")?>"></script>
+<script src="<?php echo base_url("assets/plugins/daterangepicker/daterangepicker.js")?>"></script>
 <script src="<?php echo base_url("assets/plugins/bootstrap/js/bootstrap.bundle.min.js")?>"></script>
+<script src="<?php echo base_url("assets/plugins/select2/js/select2.full.min.js")?>"></script>
 <!-- AdminLTE App -->
 <script src="<?php echo base_url("assets/dist/js/adminlte.min.js")?>"></script>
 

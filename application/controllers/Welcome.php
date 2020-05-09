@@ -110,9 +110,11 @@ class Welcome extends CI_Controller {
     }
 
     private function userHome() {
+        $this->load->model('Hotel_model');
+        $data['hotel_list']=$this->Hotel_model->hotel_get();
         $this->load->view("template/header");
         $this->load->view("template/navigation");
-        $this->load->view("user_home");
+        $this->load->view("user_home",$data);
         $this->load->view("template/footer");
     }
 

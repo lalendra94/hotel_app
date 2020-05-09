@@ -77,7 +77,7 @@
                                  with font-awesome or any other icon font library -->
                         <li class="nav-item">
                             <a href="<?php echo base_url("welcome/home") ?>" class="nav-link dashbord_class">
-                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                                <i class="nav-icon fas fa-hotel"></i>
                                 <p>Home</p>
                             </a>
                         </li>
@@ -139,6 +139,12 @@
                                 </ul>
                             </li>
                         </ul>
+                    <?php } else if ($sess_array['userType'] == "user") { ?>
+                        <a href="#" class="nav-link member_class">
+                            <i class="nav-icon fas fa-calendar"></i>
+                            <p>Reservations<i class="right fas fa-angle-left"></i>
+                            </p>
+                        </a>
                     <?php } ?>
 
                 </nav>
