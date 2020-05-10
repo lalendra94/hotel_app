@@ -35,6 +35,7 @@ class Welcome extends CI_Controller {
 
             if (count($result) > 0) {
                 $uDataArray = array(
+                    'id' => $result[0]->id,
                     'uName' => $result[0]->email,
                     'email' => $result[0]->email,
                     'Name' => $result[0]->name,

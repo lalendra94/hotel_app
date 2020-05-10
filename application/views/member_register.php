@@ -97,6 +97,3 @@
         border-color : #dd4b39
     }
 </style>
-<script type="text/javascript">
-
-</script>

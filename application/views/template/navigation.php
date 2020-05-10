@@ -9,11 +9,11 @@
                     <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
-                    <a href="../../index3.html" class="nav-link">Home</a>
+                    <a href="<?PHP echo base_url();?>" class="nav-link">Home</a>
                 </li>
-                <li class="nav-item d-none d-sm-inline-block">
+<!--                <li class="nav-item d-none d-sm-inline-block">
                     <a href="#" class="nav-link">Members List</a>
-                </li>
+                </li>-->
             </ul>
 
             <!-- SEARCH FORM -->
@@ -140,11 +140,13 @@
                             </li>
                         </ul>
                     <?php } else if ($sess_array['userType'] == "user") { ?>
+                    <li class="nav-item">
                         <a href="#" class="nav-link member_class">
                             <i class="nav-icon fas fa-calendar"></i>
-                            <p>Reservations<i class="right fas fa-angle-left"></i>
+                            <p>Your Reservations
                             </p>
                         </a>
+                    </li>
                     <?php } ?>
 
                 </nav>

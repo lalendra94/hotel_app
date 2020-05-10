@@ -8,7 +8,7 @@ class user_model extends CI_Model {
     public function validateUser($username, $pass) {
         try {
             $pass = md5($pass);
-            $sql = "SELECT * FROM sys_users where email='$username' and password='$pass' ";
+            $sql = "SELECT id, name, gender, tel, email, active, userType FROM sys_users where email='$username' and password='$pass' ";
             return $this->db->query($sql)->result();
         } catch (Exception $exc) {
             $this->db->close();
