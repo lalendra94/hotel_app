@@ -1,12 +1,14 @@
 <?php
+
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
+
 /**
  * Description of Reservation_model
  *
  * @author Ulaleka
  */
-class Reservation_model extends CI_Model{
+class Reservation_model extends CI_Model {
 
     public function checkavailability($id, $date) {
         try {
@@ -30,6 +32,18 @@ class Reservation_model extends CI_Model{
             } else {
                 return 0;
             }
+        } catch (Exception $exc) {
+            $this->db->close();
+            return 0;
+        }
+    }
+
+    public function getUser_hotel_reservations($id) {
+        try {
+            $sql = "SELECT res.id, ht.hotel_name, ty.room_type,res.room_count, res.startDate, res.endDate, res.dateTime FROM reservation res
+                    join hotel_room_types ty on res.room_type_id = ty.id
+                    join hotel ht on ht.id = res.hotel_id where res.user_id = '$id' ";
+            return $this->db->query($sql)->result();
         } catch (Exception $exc) {
             $this->db->close();
             return 0;

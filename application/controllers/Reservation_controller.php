@@ -14,6 +14,15 @@ class Reservation_controller extends MY_Controller {
         $this->load->model('Reservation_model');
         
     }
+    
+    public function user_history() {
+        $sess_array = $this->session->userdata('uDetails');
+        $data['history']=$this->Reservation_model->getUser_hotel_reservations($sess_array['id']);
+        $this->load->view("template/header");
+        $this->load->view("template/navigation");
+        $this->load->view("user_reservations",$data);
+        $this->load->view("template/footer");
+    }
 
     public function checkAvailability_ajx() {
         

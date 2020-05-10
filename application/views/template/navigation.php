@@ -9,11 +9,11 @@
                     <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
-                    <a href="<?PHP echo base_url();?>" class="nav-link">Home</a>
+                    <a href="<?PHP echo base_url(); ?>" class="nav-link">Home</a>
                 </li>
-<!--                <li class="nav-item d-none d-sm-inline-block">
-                    <a href="#" class="nav-link">Members List</a>
-                </li>-->
+                <!--                <li class="nav-item d-none d-sm-inline-block">
+                                    <a href="#" class="nav-link">Members List</a>
+                                </li>-->
             </ul>
 
             <!-- SEARCH FORM -->
@@ -78,77 +78,49 @@
                         <li class="nav-item">
                             <a href="<?php echo base_url("welcome/home") ?>" class="nav-link dashbord_class">
                                 <i class="nav-icon fas fa-hotel"></i>
-                                <p>Home</p>
+                                <p>Reservations</p>
                             </a>
                         </li>
                         <?php if ($sess_array['userType'] == "admin") { ?>
-                            <li class="nav-item has-treeview">
-                                <a href="#" class="nav-link member_class">
-                                    <i class="nav-icon fas fa-users"></i>
-                                    <p>Members<i class="right fas fa-angle-left"></i>
+<!--                            <li class="nav-item">
+                                <a href="<?php echo base_url(""); ?>" class="nav-link history">
+                                    <i class="nav-icon fas fa-calendar"></i>
+                                    <p>Reservations
                                     </p>
                                 </a>
-                                <ul class="nav nav-treeview">
-                                    <li class="nav-item">
-                                        <a href="<?php echo base_url("member/register") ?>" class="nav-link member_class_add">
-                                            <i class="far fa-circle nav-icon"></i>
-                                            <p>Register</p>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="" class="nav-link">
-                                            <i class="far fa-circle nav-icon"></i>
-                                            <p>Active List</p>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="" class="nav-link">
-                                            <i class="far fa-circle nav-icon"></i>
-                                            <p>Inactive List</p>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="nav-item has-treeview">
-                                <a href="#" class="nav-link">
-                                    <i class="nav-icon fas fa-file-invoice-dollar"></i>
-                                    <p>
-                                        Payment
-                                        <i class="right fas fa-angle-left"></i>
-                                    </p>
-                                </a>
-                                <ul class="nav nav-treeview">
-                                    <li class="nav-item">
-                                        <a href="" class="nav-link">
-                                            <i class="far fa-circle nav-icon"></i>
-                                            <p>New Payment</p>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="" class="nav-link">
-                                            <i class="far fa-circle nav-icon"></i>
-                                            <p>Payment History</p>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="../../index3.html" class="nav-link">
-                                            <i class="far fa-circle nav-icon"></i>
-                                            <p>Pending Payments</p>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    <?php } else if ($sess_array['userType'] == "user") { ?>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link member_class">
-                            <i class="nav-icon fas fa-calendar"></i>
-                            <p>Your Reservations
-                            </p>
-                        </a>
-                    </li>
-                    <?php } ?>
+                            </li>-->
 
+                        <?php } else if ($sess_array['userType'] == "user") { ?>
+                            <li class="nav-item">
+                                <a href="<?php echo base_url("Reservation_controller/user_history"); ?>" class="nav-link user_history">
+                                    <i class="nav-icon fas fa-calendar"></i>
+                                    <p>Reservations History
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="<?php echo base_url(""); ?>" class="nav-link spa_class">
+                                    <i class="nav-icon fas fa-heartbeat"></i>
+                                    <p>Spa Reservations
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="<?php echo base_url(""); ?>" class="nav-link taxi_class">
+                                    <i class="nav-icon fas fa-taxi"></i>
+                                    <p>Taxi Reservations
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="<?php echo base_url(""); ?>" class="nav-link taxi_class">
+                                    <i class="nav-icon fas fa-utensils"></i>
+                                    <p>Food Reservations
+                                    </p>
+                                </a>
+                            </li>
+                        <?php } ?>
+                    </ul>
                 </nav>
                 <!-- /.sidebar-menu -->
             </div>
